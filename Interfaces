@@ -1,0 +1,65 @@
+public interface GridItemInter {
+
+    ChessPiece getPieceOnGrid();
+
+    String getGridColor();
+
+    int getGirdVertex();
+
+    void clearCell();
+
+    boolean isEmpty();
+
+}
+
+public interface ChessPieceInter {
+    
+    void kill();
+
+    String getName();
+
+    String getColor();
+
+    GridItem getGridCell();
+
+    Graph getPosGraph(ChessPiece piece);
+
+    boolean movePiece(GridItem item);
+
+    void highlightValidPos();
+
+    void unHighLight();
+
+    boolean validMove();
+}
+
+public interface GridInter {
+
+    void fillGird();
+
+    void resetGrid();
+
+    void shake();
+}
+
+public interface GraphInter {
+    
+    boolean isConnected(int vertexA, int vertexB);
+    
+    GridItem whatsInV(int vertex);
+    
+    GridItem getGridCell(int vertex);
+    
+    String getPieceName();
+}
+
+public interface UserInter {
+
+    void incrementScore();
+    
+    String getColor();
+    
+    int getScore();
+    
+    String getUserName();
+}
